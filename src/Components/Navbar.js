@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import logo from "../assets/Standard Collection 11.svg";
 import searchLogo from "../assets/ant-design_search-outlined.svg";
@@ -8,34 +8,48 @@ import diamond from "../assets/fluent_premium-person-20-regular.svg";
 import person from "../assets/IMG20210528181544.svg";
 import arrow from "../assets/Arrow 1.svg";
 
-const Navbar = () => {
+const Navbar = ({ setQuery }) => {
+  const [query, setQuer] = useState("");
+  const handleSearch = () => {
+    const formattedQuery = query.replace(/\s/g, "+");
+    setQuery(formattedQuery);
+    console.log(formattedQuery);
+  };
+
   return (
-    <div className="navbar">
-      <div className="logo">
-        <img src={logo}></img>
-        <div className="text">
-          <p className="keazon">KeazoN</p>
-          <p className="books">Books</p>
+    <div>
+      <div className="navbar">
+        <div className="logo">
+          <img src={logo}></img>
+          <div className="text">
+            <p className="keazon">KeazoN</p>
+            <p className="books">Books</p>
+          </div>
         </div>
-      </div>
-      <div className="search">
-        <div className="search-bar">
-          <img src={searchLogo} />
-          <input
-            className="input"
-            type="text"
-            placeholder="Search for the book you want and read it now... Sherlock Holmes, Harry Pot..."
-          ></input>
+        <div className="search">
+          <div className="search-bar">
+            <img src={searchLogo} />
+            <input
+              className="input"
+              type="text"
+              placeholder="Search for the book you want and read it now... Sherlock Holmes, Harry Pot..."
+              onChange={(e) => {
+                setQuer(e.target.value);
+              }}
+            ></input>
+          </div>
+          <button className="btn" onClick={handleSearch}>
+            Search
+          </button>
         </div>
-        <button className="btn">Search</button>
-      </div>
-      <div className="icons">
-        <img src={bookHeart} />
-        <img src={notification} />
-        <img src={diamond} />
-        <div className="person-logo">
-          <img src={person} />
-          <img className="arrow" src={arrow} />
+        <div className="icons">
+          <img src={bookHeart} />
+          <img src={notification} />
+          <img src={diamond} />
+          <div className="person-logo">
+            <img src={person} />
+            <img className="arrow" src={arrow} />
+          </div>
         </div>
       </div>
     </div>
