@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: #292828;
+  align-items: center;
+  padding: 6px;
+  padding-left: 30px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+.text {
+  display: flex;
+  align-items: last baseline;
+  padding-left: 10px;
+}
+
+.keazon {
+  color: #fff;
+  font-family: Varela;
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.books {
+  color: #fff;
+  font-family: Roboto;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 100;
+  line-height: normal;
+}
+.search {
+    display: flex;
+    gap: 20px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    width: 500px;
+    height: 35px;
+    border-radius: 4px;
+    background: #373737;
+    padding-left: 10px;
+  }
+
+.icons {
+  display: flex;
+  gap: 15px;
+  padding-right: 10px;
+  /* justify-content: center;
+  align-items: center; */
+}
+
+.person-logo {
+    display: flex;
+    flex-direction: column;
+}
+.arrow{
+    width: 18px;
+    padding-left: 18px;
+}
+
+.input {
+    color: #808080;
+font-family: Roboto;
+width: 460px;
+font-size: 17px;
+font-weight: 300;
+background-color: transparent;
+border: none;
+}
+
+.input:focus{
+    outline: none;
+}
+
+.btn {
+    width: 150px;
+    border: 1px solid rgba(255, 255, 255, 0.50);
+    background-color: transparent;
+    color: white;
+}
+
+
